@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.login.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.login.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <activity
+        android:id="@+id/clienteOrAdmin"
+        android:name="com.example.login.ClienteOrAdmin"
+        android:label="activity_cliente_or_admin"
+        tools:layout="@layout/activity_cliente_or_admin" />
+    <activity
+        android:id="@+id/registroSesion"
+        android:name="com.example.login.RegistroSesion"
+        android:label="RegistroSesion" />
+    <fragment
+        android:id="@+id/administradorMenu"
+        android:name="com.example.login.AdministradorMenu"
+        android:label="fragment_administrador_menu"
+        tools:layout="@layout/fragment_administrador_menu" >
+        <action
+            android:id="@+id/action_administradorMenu_to_editarMenuAdmin"
+            app:destination="@id/editarMenuAdmin" />
+        <action
+            android:id="@+id/action_administradorMenu_to_comentariosAdmin"
+            app:destination="@id/comentariosAdmin" />
+        <action
+            android:id="@+id/action_administradorMenu_to_inventarioAdmin"
+            app:destination="@id/inventarioAdmin" />
+        <action
+            android:id="@+id/action_administradorMenu_to_pedidosAdmin"
+            app:destination="@id/pedidosAdmin" />
+        <action
+            android:id="@+id/action_administradorMenu_self"
+            app:destination="@id/administradorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarMenuAdmin"
+        android:name="com.example.login.EditarMenuAdmin"
+        android:label="fragment_editar_menu_admin"
+        tools:layout="@layout/fragment_editar_menu_admin" >
+        <action
+            android:id="@+id/action_editarMenuAdmin_to_administradorMenu"
+            app:destination="@id/administradorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/comentariosAdmin"
+        android:name="com.example.login.ComentariosAdmin"
+        android:label="fragment_comentarios_admin"
+        tools:layout="@layout/fragment_comentarios_admin" >
+        <action
+            android:id="@+id/action_comentariosAdmin_to_administradorMenu"
+            app:destination="@id/administradorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventarioAdmin"
+        android:name="com.example.login.InventarioAdmin"
+        android:label="fragment_inventario_admin"
+        tools:layout="@layout/fragment_inventario_admin" >
+        <action
+            android:id="@+id/action_inventarioAdmin_to_administradorMenu"
+            app:destination="@id/administradorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidosAdmin"
+        android:name="com.example.login.pedidosAdmin"
+        android:label="fragment_pedidos_admin"
+        tools:layout="@layout/fragment_pedidos_admin" >
+        <action
+            android:id="@+id/action_pedidosAdmin_to_administradorMenu"
+            app:destination="@id/administradorMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/clienteMenu2"
+        android:name="com.example.login.ClienteMenu"
+        android:label="fragment_cliente_menu"
+        tools:layout="@layout/fragment_cliente_menu" >
+        <action
+            android:id="@+id/action_clienteMenu2_self"
+            app:destination="@id/clienteMenu2" />
+        <action
+            android:id="@+id/action_clienteMenu2_to_menuCliente"
+            app:destination="@id/menuCliente" />
+        <action
+            android:id="@+id/action_clienteMenu2_to_comentariosCliente"
+            app:destination="@id/comentariosCliente" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuCliente"
+        android:name="com.example.login.MenuCliente"
+        android:label="fragment_menu_cliente"
+        tools:layout="@layout/fragment_menu_cliente" >
+        <action
+            android:id="@+id/action_menuCliente_to_clienteMenu2"
+            app:destination="@id/clienteMenu2" />
+    </fragment>
+    <fragment
+        android:id="@+id/comentariosCliente"
+        android:name="com.example.login.ComentariosCliente"
+        android:label="fragment_comentarios_cliente"
+        tools:layout="@layout/fragment_comentarios_cliente" >
+        <action
+            android:id="@+id/action_comentariosCliente_to_clienteMenu2"
+            app:destination="@id/clienteMenu2" />
+    </fragment>
+</navigation>
