@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
+    tools:context=".SplashFragment"
     android:background="#E91E63">
 
-    <!-- Primer Lottie: centrado arriba -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/texto"
         android:layout_width="800dp"
@@ -21,7 +21,6 @@
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/clic" />
 
-    <!-- Segundo Lottie: debajo del primero -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/platito"
         android:layout_width="match_parent"
