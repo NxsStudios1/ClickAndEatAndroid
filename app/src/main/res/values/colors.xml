@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="comentario_bg">#FFF8E1</color>
+    <color name="respuesta_bg">#E3F2FD</color>
+    <color name="texto_principal">#212121</color>
+    <color name="texto_secundario">#555555</color>
+    <color name="texto_suave">#777777</color>
+
 </resources>

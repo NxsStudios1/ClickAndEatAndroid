@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.sesion;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import com.example.login.R;
 
 public class RegistroExitosoFragment extends Fragment {
 

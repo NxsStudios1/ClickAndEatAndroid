@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.login.sesion;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import com.example.login.R;
 
 public class LoginSuccessFragment extends Fragment {
 
@@ -57,7 +59,6 @@ public class LoginSuccessFragment extends Fragment {
                 Navigation.findNavController(view)
                         .navigate(R.id.clienteMenu);
             } else {
-                // Rol raro: regresamos al login por seguridad
                 Navigation.findNavController(view)
                         .navigate(R.id.loginfragment);
             }

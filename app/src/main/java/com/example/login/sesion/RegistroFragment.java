@@ -1,5 +1,6 @@
-package com.example.login;
+package com.example.login.sesion;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -12,10 +13,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.login.R;
 import com.example.login.network.ApiClient;
 import com.example.login.network.SpringApiService;
 import com.example.login.network.model.UsuarioDto;
@@ -47,6 +50,14 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(@NonNull View view,
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ConstraintLayout root = view.findViewById(R.id.main);
+        if (root != null && root.getBackground() instanceof AnimationDrawable) {
+            AnimationDrawable animationDrawable = (AnimationDrawable) root.getBackground();
+            animationDrawable.setEnterFadeDuration(2500);
+            animationDrawable.setExitFadeDuration(5000);
+            animationDrawable.start();
+        }
 
         ScrollView scrollView = view.findViewById(R.id.registro);
 
@@ -89,7 +100,6 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
 
             registrarUsuario(nombreTxt, telefonoTxt, contraTxt);
         } else if (v.getId() == R.id.btnRegresar) {
-            // Volver al login directamente
             navController.navigate(R.id.loginfragment);
         }
     }

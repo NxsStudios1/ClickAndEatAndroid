@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="@drawable/lista_drawable"
-    tools:context=".RegistroExitosoFragment">
+    tools:context=".sesion.RegistroExitosoFragment">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/validado"

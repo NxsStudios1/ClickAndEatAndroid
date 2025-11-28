@@ -14,20 +14,17 @@
         android:layout_height="wrap_content"
         android:padding="32dp"
         android:layout_margin="20dp"
-        tools:context=".RegistroFragment">
-
+        tools:context=".sesion.RegistroFragment">
         <TextView
             android:id="@+id/tvCrearCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Crear una"
+            android:text="Crear cuenta"
             android:textColor="#FFFFFF"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/tvCuentaNueva"

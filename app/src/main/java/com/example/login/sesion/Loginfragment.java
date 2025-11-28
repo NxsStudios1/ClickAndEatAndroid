@@ -1,5 +1,9 @@
-package com.example.login;
+// Loginfragment.java
+package com.example.login.sesion;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,10 +15,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.login.R;
 import com.example.login.network.ApiClient;
 import com.example.login.network.SpringApiService;
 import com.example.login.network.model.UsuarioDto;
@@ -31,9 +37,7 @@ public class Loginfragment extends Fragment {
     private Button btnLogin, btnRegister;
     private SpringApiService apiService;
 
-    public Loginfragment() {
-        // Constructor vacío
-    }
+    public Loginfragment() { }
 
     @Nullable
     @Override
@@ -46,6 +50,13 @@ public class Loginfragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view,
                               @Nullable Bundle savedInstanceState) {
+        ConstraintLayout root = view.findViewById(R.id.main);
+        if (root != null && root.getBackground() instanceof AnimationDrawable) {
+            AnimationDrawable animationDrawable = (AnimationDrawable) root.getBackground();
+            animationDrawable.setEnterFadeDuration(2500);
+            animationDrawable.setExitFadeDuration(5000);
+            animationDrawable.start();
+        }
         super.onViewCreated(view, savedInstanceState);
 
         etUser = view.findViewById(R.id.etname);
@@ -75,12 +86,15 @@ public class Loginfragment extends Fragment {
         });
     }
 
-    private void realizarLogin(String telefono, String contrasena, NavController navController) {
+    private void realizarLogin(String telefono,
+                               String contrasena,
+                               NavController navController) {
+
         Call<List<UsuarioDto>> call = apiService.getUsuarios();
         call.enqueue(new Callback<List<UsuarioDto>>() {
             @Override
-            public void onResponse(Call<List<UsuarioDto>> call,
-                                   Response<List<UsuarioDto>> response) {
+            public void onResponse(@NonNull Call<List<UsuarioDto>> call,
+                                   @NonNull Response<List<UsuarioDto>> response) {
                 if (!isAdded()) return;
 
                 if (response.isSuccessful() && response.body() != null) {
@@ -88,8 +102,8 @@ public class Loginfragment extends Fragment {
 
                     UsuarioDto encontrado = null;
                     for (UsuarioDto u : usuarios) {
-                        if (telefono.equals(u.getTelefono()) &&
-                                contrasena.equals(u.getContrasena())) {
+                        if (telefono.equals(u.getTelefono())
+                                && contrasena.equals(u.getContrasena())) {
                             encontrado = u;
                             break;
                         }
@@ -97,17 +111,30 @@ public class Loginfragment extends Fragment {
 
                     if (encontrado == null) {
                         Toast.makeText(requireContext(),
-                                "Credenciales incorrectas",
+                                "Credenciales incorrectos",
                                 Toast.LENGTH_SHORT).show();
                         return;
                     }
 
                     int rol = encontrado.getRol();
 
-                    // En lugar de ir directo al menú, vamos al fragment de éxito
+                    // 🔹 GUARDAMOS ID, NOMBRE Y ROL EN PREFERENCIAS
+                    SharedPreferences prefs = requireContext()
+                            .getSharedPreferences("sesion", Context.MODE_PRIVATE);
+
+                    prefs.edit()
+                            .putInt("idUsuario", encontrado.getId())
+                            .putString("nombreUsuario", encontrado.getNombre())
+                            .putInt("rolUsuario", rol)
+                            .apply();
+
+                    // Vamos al fragment de éxito con el rol
                     Bundle args = new Bundle();
                     args.putInt("rol", rol);
-                    navController.navigate(R.id.action_loginfragment_to_loginSuccessFragment, args);
+                    navController.navigate(
+                            R.id.action_loginfragment_to_loginSuccessFragment,
+                            args
+                    );
 
                 } else {
                     Toast.makeText(requireContext(),
@@ -117,7 +144,8 @@ public class Loginfragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<UsuarioDto>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<UsuarioDto>> call,
+                                  @NonNull Throwable t) {
                 if (!isAdded()) return;
                 Toast.makeText(requireContext(),
                         "Error de conexión: " + t.getLocalizedMessage(),

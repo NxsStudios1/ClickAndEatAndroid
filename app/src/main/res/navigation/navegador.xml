@@ -5,10 +5,10 @@
     android:id="@+id/navegador"
     app:startDestination="@id/splashFragment">
 
-    <!-- Splash inicial -->
+    <!-- ========== SPLASH INICIAL ========== -->
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.login.SplashFragment"
+        android:name="com.example.login.sesion.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
 
@@ -17,10 +17,10 @@
             app:destination="@id/loginfragment" />
     </fragment>
 
-    <!-- Login -->
+    <!-- ========== LOGIN ========== -->
     <fragment
         android:id="@+id/loginfragment"
-        android:name="com.example.login.Loginfragment"
+        android:name="com.example.login.sesion.Loginfragment"
         android:label="fragment_loginfragment"
         tools:layout="@layout/fragment_loginfragment">
 
@@ -28,62 +28,86 @@
             android:id="@+id/action_loginfragment_to_registroFragment"
             app:destination="@id/registroFragment" />
 
-        <!-- NUEVO: después de login correcto vamos a este fragmento de animación -->
         <action
             android:id="@+id/action_loginfragment_to_loginSuccessFragment"
             app:destination="@id/loginSuccessFragment" />
     </fragment>
 
-    <!-- Registro -->
+    <!-- ========== REGISTRO ========== -->
     <fragment
         android:id="@+id/registroFragment"
-        android:name="com.example.login.RegistroFragment"
+        android:name="com.example.login.sesion.RegistroFragment"
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro">
 
-        <!-- NUEVO: después de crear cuenta, vamos a animación de registro exitoso -->
         <action
             android:id="@+id/action_registroFragment_to_registroExitosoFragment"
             app:destination="@id/registroExitosoFragment" />
     </fragment>
 
-    <!-- Registro exitoso -->
+    <!-- ========== REGISTRO EXITOSO ========== -->
     <fragment
         android:id="@+id/registroExitosoFragment"
-        android:name="com.example.login.RegistroExitosoFragment"
+        android:name="com.example.login.sesion.RegistroExitosoFragment"
         android:label="fragment_registro_exitoso"
         tools:layout="@layout/fragment_registro_exitoso">
 
-        <!-- Después de la animación, volvemos al login -->
         <action
             android:id="@+id/action_registroExitosoFragment_to_loginfragment"
             app:destination="@id/loginfragment" />
     </fragment>
 
-    <!-- Login exitoso -->
+    <!-- ========== LOGIN EXITOSO (decide menú) ========== -->
     <fragment
         android:id="@+id/loginSuccessFragment"
-        android:name="com.example.login.LoginSuccessFragment"
+        android:name="com.example.login.sesion.LoginSuccessFragment"
         android:label="fragment_login_exitoso"
         tools:layout="@layout/fragment_login_exitoso">
 
-        <!-- Argumento para saber a qué menú ir (1=admin, 2=cliente) -->
+        <!-- 1 = admin, 2 = cliente -->
         <argument
             android:name="rol"
             app:argType="integer" />
     </fragment>
 
-    <!-- Menú ADMIN -->
+    <!-- ========== MENÚ ADMIN ========== -->
     <fragment
         android:id="@+id/administradorMenu"
-        android:name="com.example.login.AdministradorMenu"
+        android:name="com.example.login.administrador.AdministradorMenu"
         android:label="fragment_administrador_menu"
         tools:layout="@layout/fragment_administrador_menu" />
+
+    <!-- ========== MENÚ CLIENTE (contenedor con bottom nav) ========== -->
     <fragment
         android:id="@+id/clienteMenu"
-        android:name="com.example.login.ClienteMenu"
-        android:label="ClienteMenu" />
+        android:name="com.example.login.cliente.ClienteMenu"
+        android:label="fragment_cliente_menu"
+        tools:layout="@layout/fragment_cliente_menu" />
+    <action
+        android:id="@+id/action_clienteMenu_to_nuevoComentarioCliente"
+        app:destination="@+id/nuevoComentarioCliente"/>
 
-    <!-- Menú CLIENTE -->
+    <!-- Datos de usuario (si lo usas) -->
+    <fragment
+        android:id="@+id/clienteUsuario"
+        android:name="com.example.login.cliente.ClienteUsuarioFragment"
+        android:label="fragment_cliente_usuario"
+        tools:layout="@layout/fragment_cliente_usuario" />
+
+    <!-- ========== LISTA DE COMENTARIOS CLIENTE ========== -->
+    <fragment
+        android:id="@+id/comentariosCliente"
+        android:name="com.example.login.cliente.ComentariosCliente"
+        android:label="fragment_comentarios_cliente"
+        tools:layout="@layout/fragment_comentarios_cliente">
+
+    </fragment>
+
+    <!-- ========== NUEVO COMENTARIO CLIENTE ========== -->
+    <fragment
+        android:id="@+id/nuevoComentarioCliente"
+        android:name="com.example.login.cliente.NuevoComentarioCliente"
+        android:label="fragment_nuevo_comentario_cliente"
+        tools:layout="@layout/fragment_nuevo_comentario_cliente" />
 
 </navigation>

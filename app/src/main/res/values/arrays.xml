@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias_comentario_labels">
+        <item>General</item>
+        <item>Comida</item>
+        <item>Servicio</item>
+        <item>Ambiente</item>
+        <item>Tiempo Espera</item>
+    </string-array>
+
+    <string-array name="categorias_comentario_keys">
+        <item>GENERAL</item>
+        <item>COMIDA</item>
+        <item>SERVICIO</item>
+        <item>AMBIENTE</item>
+        <item>TIEMPO_ESPERA</item>
+    </string-array>
+
+</resources>

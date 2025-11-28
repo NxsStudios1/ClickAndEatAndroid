@@ -16,4 +16,6 @@
     <string name="mensaje_cuenta_creada">¡Cuenta creada exitosamente!</string>
     +
     <string name="mensaje_bienvenida">¡Bienvenido!</string>
+    +
+    <string name="agregar_comentario">¡Agregar Comentario!</string>
 </resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_redondeado"
+    android:orientation="vertical">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTituloDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Responder comentario"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#222222"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp" />
+
+    <!-- Línea separadora -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Nombre del cliente -->
+    <TextView
+        android:id="@+id/tvNombreClienteDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cliente: Juan Pérez"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Comentario original -->
+    <TextView
+        android:id="@+id/tvComentarioOriginalDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comentario original del cliente..."
+        android:textColor="#777777"
+        android:textSize="13sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Tu respuesta -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu respuesta:"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etRespuestaDialog"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top|start"
+        android:padding="8dp"
+        android:hint="Escribe aquí la respuesta para el cliente..."
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="6"
+        android:textSize="14sp" />
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnCancelarDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" />
+
+        <Button
+            android:id="@+id/btnEnviarDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
