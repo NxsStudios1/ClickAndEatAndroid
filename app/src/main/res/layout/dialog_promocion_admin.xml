@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFF3E0">
+
+        <TextView
+            android:id="@+id/tvTituloDialogPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Promoción"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <!-- NOMBRE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="#555555"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNombrePromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#999999"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- DESCRIPCIÓN -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etDescripcionPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#999999"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- FECHA INICIO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha inicio (yyyy-MM-dd)"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etFechaInicioPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="2025-11-30"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#999999"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- FECHA FIN -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha fin (yyyy-MM-dd)"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etFechaFinPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="2025-12-30"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#999999"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- PRECIO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio de la promoción"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etPrecioPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#999999"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Texto de ayuda -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Define nombre, fechas y precio que se mostrará al cliente."
+            android:textColor="#757575"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancelarPromocion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#9E9E9E" />
+
+            <Button
+                android:id="@+id/btnGuardarPromocion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF9800"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

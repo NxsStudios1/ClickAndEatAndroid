@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_card_ingrediente">
+
+        <!-- NOMBRE -->
+        <TextView
+            android:id="@+id/tvNombrePromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre promo"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <!-- ID -->
+        <TextView
+            android:id="@+id/tvIdPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID: 1"
+            android:textSize="12sp"
+            android:textColor="#CFD8DC" />
+
+        <!-- DESCRIPCIÓN -->
+        <TextView
+            android:id="@+id/tvDescripcionPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción de la promo"
+            android:textSize="14sp"
+            android:textColor="#ECEFF1"
+            android:layout_marginTop="4dp" />
+
+        <!-- FECHA INICIO -->
+        <TextView
+            android:id="@+id/tvFechaInicioPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicio: 2025-11-30"
+            android:textSize="13sp"
+            android:textColor="#FFE082"
+            android:layout_marginTop="4dp" />
+
+        <!-- FECHA FIN -->
+        <TextView
+            android:id="@+id/tvFechaFinPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fin: 2025-12-30"
+            android:textSize="13sp"
+            android:textColor="#FFE082" />
+
+        <!-- PRECIO -->
+        <TextView
+            android:id="@+id/tvPrecioPromocion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$ 0.00"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#FFECB3"
+            android:layout_marginTop="4dp" />
+
+        <!-- CONTROLES (SWITCH + BOTONES) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <Switch
+                android:id="@+id/swDisponiblePromocion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disponible"
+                android:textColor="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/btnConfigProductosPromo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Configurar productos"
+                android:padding="4dp"
+                android:tint="#FFFFFF"
+                android:src="@android:drawable/ic_menu_manage" />
+
+            <ImageButton
+                android:id="@+id/btnEditarPromocion"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Editar promoción"
+                android:padding="4dp"
+                android:tint="#FFFFFF"
+                android:src="@android:drawable/ic_menu_edit" />
+
+            <!-- NUEVO: BOTÓN ELIMINAR -->
+            <ImageButton
+                android:id="@+id/btnEliminarPromocion"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Eliminar promoción"
+                android:padding="4dp"
+                android:tint="#FFCDD2"
+                android:src="@android:drawable/ic_menu_delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

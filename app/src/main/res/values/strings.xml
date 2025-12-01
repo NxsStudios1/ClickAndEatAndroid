@@ -18,4 +18,13 @@
     <string name="mensaje_bienvenida">¡Bienvenido!</string>
     +
     <string name="agregar_comentario">¡Agregar Comentario!</string>
+    +
+    <string-array name="unidades_medida">
+        <item>GRAMOS</item>
+        <item>LITROS</item>
+        <item>MILILITROS</item>
+        <item>UNIDADES</item>
+        <item>KILOGRAMOS</item>
+    </string-array>
+
 </resources>

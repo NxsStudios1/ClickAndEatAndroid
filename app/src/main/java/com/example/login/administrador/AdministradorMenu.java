@@ -10,8 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.login.R;
-import com.example.login.administrador.ComentariosAdmin;
-import com.example.login.administrador.EditarMenuAdmin;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AdministradorMenu extends Fragment {
@@ -53,7 +51,7 @@ public class AdministradorMenu extends Fragment {
                 selectedFragment = new PedidosAdmin();
             } else if (id == R.id.nav_admin_inventario) {
                 // Inventario admin
-                selectedFragment = new InventarioAdmin();
+                selectedFragment = new InventarioAdminFragment();
             } else if (id == R.id.nav_admin_usuario) {
                 selectedFragment = new AdminUsuarioFragment();
             }
