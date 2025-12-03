@@ -4,6 +4,7 @@ package com.example.login.network;
 import com.example.login.network.model.CategoriaProductoDto;
 import com.example.login.network.model.ComentarioDto;
 import com.example.login.network.model.IngredienteDto;
+import com.example.login.network.model.PedidoDto;
 import com.example.login.network.model.ProductoDto;
 import com.example.login.network.model.ProductoIngredienteDto;
 import com.example.login.network.model.PromocionDto;
@@ -148,4 +149,8 @@ public interface SpringApiService {
     @DELETE("promocionProducto/{id}")
     Call<Void> eliminarPromocionProducto(@Path("id") int id);
 
+    // ============ PEDIDO ============
+
+    @POST("pedido")
+    Call<PedidoDto> crearPedido(@Body PedidoDto pedido);
 }

@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#1B2135">
+    android:layout_height="match_parent">
 
+    <!-- BARRA SUPERIOR -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="418dp"
+        android:layout_width="0dp"
         android:layout_height="85dp"
         android:background="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
