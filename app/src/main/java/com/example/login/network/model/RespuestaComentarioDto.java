@@ -1,4 +1,3 @@
-// com/example/login/network/model/RespuestaComentarioDto.java
 package com.example.login.network.model;
 
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +19,6 @@ public class RespuestaComentarioDto {
     @SerializedName("idAdministrador")
     private int idAdministrador;
 
-    // NUEVO: nombre del administrador que responde
     @SerializedName("nombreAdministrador")
     private String nombreAdministrador;
 

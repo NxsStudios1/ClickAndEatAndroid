@@ -28,7 +28,7 @@
         </activity>
 
         <activity
-            android:name=".cliente.ClienteActivity"
+            android:name=".cliente.menuc.ClienteActivity"
             android:exported="false" />
 
     </application>

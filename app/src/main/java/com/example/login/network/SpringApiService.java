@@ -1,8 +1,8 @@
-// com/example/login/network/SpringApiService.java
 package com.example.login.network;
 
 import com.example.login.network.model.CategoriaProductoDto;
 import com.example.login.network.model.ComentarioDto;
+import com.example.login.network.model.DetallePedidoDto;
 import com.example.login.network.model.IngredienteDto;
 import com.example.login.network.model.PedidoDto;
 import com.example.login.network.model.ProductoDto;
@@ -135,6 +135,7 @@ public interface SpringApiService {
     @DELETE("promocion/{id}")
     Call<Void> eliminarPromocion(@Path("id") int id);
 
+
     // ============ PROMOCION - PRODUCTO (RELACIÓN) ============
     @GET("promocionProducto")
     Call<List<PromocionProductoDto>> getPromocionProductos();
@@ -149,8 +150,19 @@ public interface SpringApiService {
     @DELETE("promocionProducto/{id}")
     Call<Void> eliminarPromocionProducto(@Path("id") int id);
 
-    // ============ PEDIDO ============
+
+    // ================== PEDIDOS ==================
 
     @POST("pedido")
     Call<PedidoDto> crearPedido(@Body PedidoDto pedido);
+
+    @GET("pedido")
+    Call<List<PedidoDto>> getPedidos();
+
+    @PUT("pedido/{id}")
+    Call<PedidoDto> actualizarPedido(@Path("id") int id,
+                                     @Body PedidoDto pedido);
+
+    @GET("detallePedido/pedido/{idPedido}")
+    Call<List<DetallePedidoDto>> getDetallesPorPedido(@Path("idPedido") int idPedido);
 }

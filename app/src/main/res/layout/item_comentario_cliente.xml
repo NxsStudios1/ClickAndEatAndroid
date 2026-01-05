@@ -10,14 +10,12 @@
     card_view:cardCornerRadius="18dp"
     card_view:cardElevation="4dp">
 
-    <!-- Contenedor grande del comentario + posible respuesta -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/bg_card_cliente">
 
-        <!-- encabezado cliente -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +26,7 @@
             <View
                 android:layout_width="12dp"
                 android:layout_height="12dp"
-                android:background="#4CAF50"
+                android:background="#121614"
                 android:layout_marginEnd="8dp" />
 
             <TextView
@@ -50,7 +48,6 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <!-- categoría + calificación -->
         <TextView
             android:id="@+id/tvCategoriaCalificacion"
             android:layout_width="match_parent"
@@ -59,7 +56,6 @@
             android:textColor="@color/texto_secundario"
             android:textSize="12sp" />
 
-        <!-- Asunto -->
         <TextView
             android:id="@+id/tvAsuntoComentario"
             android:layout_width="match_parent"
@@ -70,7 +66,6 @@
             android:textStyle="bold"
             android:textSize="13sp" />
 
-        <!-- Texto del comentario -->
         <TextView
             android:id="@+id/tvTextoComentario"
             android:layout_width="match_parent"
@@ -80,7 +75,6 @@
             android:textColor="@color/texto_suave"
             android:textSize="13sp" />
 
-        <!-- Tarjeta de la respuesta del admin -->
         <LinearLayout
             android:id="@+id/layoutRespuestaAdmin"
             android:layout_width="match_parent"

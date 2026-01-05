@@ -41,7 +41,6 @@ public final class ApiClient {
                 .build();
 
         return new Retrofit.Builder()
-                // URL base de tu Spring Boot (desde el emulador)
                 .baseUrl("http://10.0.2.2:8080/Gerdoc/api/")
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())

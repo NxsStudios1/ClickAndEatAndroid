@@ -19,7 +19,6 @@ public class SplashFragment extends Fragment {
     private static final long SPLASH_DURATION = 3500L;
 
     public SplashFragment() {
-        // Constructor vacío
     }
 
     @Nullable

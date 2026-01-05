@@ -26,7 +26,6 @@
         android:textStyle="bold"
         android:layout_marginBottom="8dp" />
 
-    <!-- Ingrediente -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp" />
 
-    <!-- Cantidad -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +60,6 @@
         android:padding="8dp"
         android:layout_marginTop="4dp" />
 
-    <!-- Texto de ayuda -->
     <TextView
         android:id="@+id/tvAyudaProductoIng"
         android:layout_width="match_parent"
@@ -72,7 +69,6 @@
         android:textSize="12sp"
         android:layout_marginTop="8dp" />
 
-    <!-- Botones -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

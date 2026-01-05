@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B2135">
+    android:background="#FFF4E0"
+    tools:context=".administrador.menua.AdministradorMenu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topBar"
-        android:layout_width="418dp"
+        android:layout_width="0dp"
         android:layout_height="85dp"
-        android:background="#C7692D"
+        android:background="#D96D22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,10 +28,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.827" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- CONTENEDOR PARA LOS FRAGMENTOS DE CADA TAB -->
     <FrameLayout
         android:id="@+id/admin_fragment_container"
         android:layout_width="0dp"
@@ -40,7 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- BOTTOM NAVIGATION CON 4 TABS -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationAdmin"
         android:layout_width="0dp"

@@ -1,36 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:layout_width="160dp"
-    android:layout_height="match_parent"
-    android:layout_marginEnd="8dp"
-    android:background="@drawable/bg_card_cliente">
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFF4F7"
+    app:strokeWidth="1dp"
+    app:strokeColor="#FFB74D">
 
-    <TextView
-        android:id="@+id/tvNombreProductoCli"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tvDescripcionProductoCli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/imgProductoCli"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/producto" />
 
-    <TextView
-        android:id="@+id/tvPrecioProductoCli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:paddingTop="4dp" />
+        <TextView
+            android:id="@+id/tvNombreProductoCli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingTop="6dp" />
 
-    <Button
-        android:id="@+id/btnAgregarProductoCli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar"
-        android:layout_marginTop="4dp" />
+        <TextView
+            android:id="@+id/tvDescripcionProductoCli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingTop="2dp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvPrecioProductoCli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:paddingTop="4dp" />
+            
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAgregarProductoCli"
+            android:text="Agregar"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"/>
+        
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -73,14 +73,14 @@
     <!-- ========== MENÚ ADMIN ========== -->
     <fragment
         android:id="@+id/administradorMenu"
-        android:name="com.example.login.administrador.AdministradorMenu"
+        android:name="com.example.login.administrador.menua.AdministradorMenu"
         android:label="fragment_administrador_menu"
         tools:layout="@layout/fragment_administrador_menu" />
 
     <!-- ========== MENÚ CLIENTE (contenedor con bottom nav) ========== -->
     <fragment
         android:id="@+id/clienteMenu"
-        android:name="com.example.login.cliente.ClienteMenu"
+        android:name="com.example.login.cliente.menuc.ClienteMenu"
         android:label="fragment_cliente_menu"
         tools:layout="@layout/fragment_cliente_menu" />
     <action
@@ -90,14 +90,14 @@
     <!-- Datos de usuario (si lo usas) -->
     <fragment
         android:id="@+id/clienteUsuario"
-        android:name="com.example.login.cliente.ClienteUsuarioFragment"
+        android:name="com.example.login.cliente.menuc.ClienteUsuarioFragment"
         android:label="fragment_cliente_usuario"
         tools:layout="@layout/fragment_cliente_usuario" />
 
     <!-- ========== LISTA DE COMENTARIOS CLIENTE ========== -->
     <fragment
         android:id="@+id/comentariosCliente"
-        android:name="com.example.login.cliente.ComentariosCliente"
+        android:name="com.example.login.cliente.comentac.ComentariosCliente"
         android:label="fragment_comentarios_cliente"
         tools:layout="@layout/fragment_comentarios_cliente">
 
@@ -106,8 +106,12 @@
     <!-- ========== NUEVO COMENTARIO CLIENTE ========== -->
     <fragment
         android:id="@+id/nuevoComentarioCliente"
-        android:name="com.example.login.cliente.NuevoComentarioCliente"
+        android:name="com.example.login.cliente.comentac.NuevoComentarioCliente"
         android:label="fragment_nuevo_comentario_cliente"
         tools:layout="@layout/fragment_nuevo_comentario_cliente" />
 
+    <fragment
+        android:id="@+id/pedidosAdminFragment"
+        android:name="com.example.login.administrador.pedidosa.PedidosAdmin"
+        android:label="Pedidos"/>
 </navigation>

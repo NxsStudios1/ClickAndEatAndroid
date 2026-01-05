@@ -16,12 +16,11 @@ import com.example.login.R;
 
 public class LoginSuccessFragment extends Fragment {
 
-    private static final long DELAY_MS = 4000L; // 4 segundos
+    private static final long DELAY_MS = 4000L;
 
     private int rol = 0;
 
     public LoginSuccessFragment() {
-        // Constructor vacío
     }
 
     @Override
@@ -46,7 +45,6 @@ public class LoginSuccessFragment extends Fragment {
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Después de 4 segundos, mandamos al menú correcto según rol
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             if (!isAdded()) return;
 

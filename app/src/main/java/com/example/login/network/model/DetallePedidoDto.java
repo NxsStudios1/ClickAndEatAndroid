@@ -1,17 +1,26 @@
 package com.example.login.network.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class DetallePedidoDto {
 
     private int id;
     private int idPedido;
 
-    // uno de los dos se usa según el tipo
     private Integer idProducto;
     private Integer idPromocion;
 
-    private String tipo;         // "PRODUCTO" o "PROMOCION"
+    @SerializedName("tipoItem")
+    private int tipoItem;
+
     private int cantidad;
     private double precioUnitario;
+
+    @SerializedName("subtotal")
+    private double subtotal;
+
+    public double getSubtotal() { return subtotal; }
+    public void setSubtotal(double subtotal) { this.subtotal = subtotal; }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -25,8 +34,8 @@ public class DetallePedidoDto {
     public Integer getIdPromocion() { return idPromocion; }
     public void setIdPromocion(Integer idPromocion) { this.idPromocion = idPromocion; }
 
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
+    public int getTipoItem() { return tipoItem; }
+    public void setTipoItem(int tipoItem) { this.tipoItem = tipoItem; }
 
     public int getCantidad() { return cantidad; }
     public void setCantidad(int cantidad) { this.cantidad = cantidad; }

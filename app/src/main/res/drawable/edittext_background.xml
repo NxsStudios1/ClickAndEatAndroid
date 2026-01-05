@@ -2,13 +2,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <!-- Fondo semi-transparente blanco -->
     <solid android:color="#33FFFFFF" />
 
-    <!-- Bordes redondeados -->
     <corners android:radius="25dp" />
-
-    <!-- Borde blanco sutil -->
     <stroke
         android:width="2dp"
         android:color="#66FFFFFF" />

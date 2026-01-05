@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/login/network/model/ProductoIngredienteDto.java
 package com.example.login.network.model;
 
 import com.google.gson.annotations.SerializedName;

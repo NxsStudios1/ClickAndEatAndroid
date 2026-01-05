@@ -19,16 +19,11 @@ public class ProductoDto {
     @SerializedName("disponible")
     private boolean disponible;
 
-    // OJO: pon aquí el nombre EXACTO que use tu backend:
-    // puede ser "idCategoriaProducto" o "idCategoria"
     @SerializedName("idCategoria")
-    private int idCategoria;      // usamos este en el código
-
-    // (opcional) nombre de categoría que regresa el backend
+    private int idCategoria;
     @SerializedName("nombreCategoria")
     private String nombreCategoria;
 
-    // getters / setters...
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }

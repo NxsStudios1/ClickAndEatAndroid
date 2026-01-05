@@ -1,11 +1,10 @@
-// com/example/login/network/model/PromocionProductoDto.java
 package com.example.login.network.model;
 
 public class PromocionProductoDto {
     private int id;
     private int idPromocion;
     private int idProducto;
-    private double cantidadProducto; // double para cuadrar con el backend
+    private double cantidadProducto;
 
     public PromocionProductoDto() { }
 

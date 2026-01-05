@@ -129,7 +129,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/edittext_background"
-            android:hint="Mínimo 6 caracteres"
+            android:hint="10 Caracteres e Incluir Numeros"
             android:inputType="textPassword"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"

@@ -3,105 +3,84 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFF4F7">
 
-    <!-- Buscador + categoría -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
 
         <EditText
             android:id="@+id/etBuscarCliente"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Buscar..." />
+            android:hint="Buscar producto o promo..."
+            android:imeOptions="actionSearch" />
 
         <Spinner
-            android:id="@+id/spCategoriaCliente"
+            android:id="@+id/spTipoListaCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-    <!-- Lista de promociones -->
     <TextView
+        android:id="@+id/tvTituloListaCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Promociones"
+        android:text="Productos disponibles"
         android:textStyle="bold"
-        android:paddingTop="8dp" />
+        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:paddingBottom="4dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerPromosCliente"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:paddingTop="4dp" />
-
-    <!-- Lista de productos -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Productos"
-        android:textStyle="bold"
-        android:paddingTop="8dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerProductosCliente"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:paddingTop="4dp" />
-
-    <!-- Carrito -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Carrito"
-        android:textStyle="bold"
-        android:paddingTop="8dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerCarritoCliente"
+        android:id="@+id/recyclerListaCliente"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:paddingTop="4dp" />
 
-    <!-- Total + botones -->
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/barraCarritoCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="4dp">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#FFE0B2"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgIconoCarritoCliente"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_shopping_cart_24"/>
 
         <TextView
-            android:id="@+id/tvTotalCarritoCliente"
-            android:layout_width="match_parent"
+            android:id="@+id/tvResumenCarritoCliente"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Total: $ 0.0"
-            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="0 artículos · Total: $0.0"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnObservacionesCliente"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:paddingTop="4dp">
+            android:text="Nota" />
 
-            <Button
-                android:id="@+id/btnObservacionesCliente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Observaciones" />
-
-            <Button
-                android:id="@+id/btnConfirmarPedidoCliente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Confirmar"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnVerCarritoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver carrito"
+            android:layout_marginStart="8dp" />
     </LinearLayout>
 
 </LinearLayout>

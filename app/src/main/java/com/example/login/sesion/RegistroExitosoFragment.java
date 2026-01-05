@@ -19,7 +19,6 @@ public class RegistroExitosoFragment extends Fragment {
     private static final long DELAY_MS = 4000L; // 2 segundos
 
     public RegistroExitosoFragment() {
-        // Constructor vacío
     }
 
     @Nullable
@@ -35,7 +34,6 @@ public class RegistroExitosoFragment extends Fragment {
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Después de 2 segundos, volver al login
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             if (isAdded()) {
                 Navigation.findNavController(view)

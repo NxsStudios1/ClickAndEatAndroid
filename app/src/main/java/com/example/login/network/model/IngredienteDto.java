@@ -17,8 +17,7 @@ public class IngredienteDto {
     private double cantidadPorcion;
 
     @SerializedName("unidadMedida")
-    private String unidadMedida; // "GRAMOS", "LITROS", etc.
-
+    private String unidadMedida;
     @SerializedName("stockActual")
     private double stockActual;
 
@@ -26,8 +25,6 @@ public class IngredienteDto {
     private double precioUnitario;
 
     public IngredienteDto() {}
-
-    // Getters y setters
 
     public int getId() {
         return id;

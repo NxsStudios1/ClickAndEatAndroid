@@ -6,13 +6,22 @@ public class PedidoDto {
 
     private int id;
     private String numeroTicket;
-    private int estado;           // PENDIENTE, EN_PROCESO, etc.
+    private int estado;
     private double total;
-    private String fechaPedido;      // opcional, el backend puede ignorar
+    private String fechaPedido;
     private String observaciones;
-    private int idCliente;           // FK a cliente
+    private int idCliente;
 
     private List<DetallePedidoDto> detalles;
+
+    private String nombreCliente;
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -20,13 +29,8 @@ public class PedidoDto {
     public String getNumeroTicket() { return numeroTicket; }
     public void setNumeroTicket(String numeroTicket) { this.numeroTicket = numeroTicket; }
 
-    public int getEstado() {
-        return estado;
-    }
-
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
+    public int getEstado() { return estado; }
+    public void setEstado(int estado) { this.estado = estado; }
 
     public double getTotal() { return total; }
     public void setTotal(double total) { this.total = total; }

@@ -1,12 +1,11 @@
-// com/example/login/network/model/PromocionDto.java
 package com.example.login.network.model;
 
 public class PromocionDto {
     private int id;
     private String nombre;
     private String descripcion;
-    private String fechaInicio;             // "yyyy-MM-dd"
-    private String fechaFin;                // "yyyy-MM-dd"
+    private String fechaInicio;
+    private String fechaFin;
     private double precioTotalConDescuento;
     private boolean activo;
 

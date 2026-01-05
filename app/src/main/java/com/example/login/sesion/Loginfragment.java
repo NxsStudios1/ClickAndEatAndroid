@@ -1,4 +1,4 @@
-// Loginfragment.java
+// app/src/main/java/com/example/login/sesion/Loginfragment.java
 package com.example.login.sesion;
 
 import android.content.Context;
@@ -50,6 +50,7 @@ public class Loginfragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view,
                               @Nullable Bundle savedInstanceState) {
+
         ConstraintLayout root = view.findViewById(R.id.main);
         if (root != null && root.getBackground() instanceof AnimationDrawable) {
             AnimationDrawable animationDrawable = (AnimationDrawable) root.getBackground();
@@ -57,6 +58,7 @@ public class Loginfragment extends Fragment {
             animationDrawable.setExitFadeDuration(5000);
             animationDrawable.start();
         }
+
         super.onViewCreated(view, savedInstanceState);
 
         etUser = view.findViewById(R.id.etname);
@@ -118,17 +120,16 @@ public class Loginfragment extends Fragment {
 
                     int rol = encontrado.getRol();
 
-                    // 🔹 GUARDAMOS ID, NOMBRE Y ROL EN PREFERENCIAS
                     SharedPreferences prefs = requireContext()
                             .getSharedPreferences("sesion", Context.MODE_PRIVATE);
 
                     prefs.edit()
                             .putInt("idUsuario", encontrado.getId())
                             .putString("nombreUsuario", encontrado.getNombre())
+                            .putString("telefonoUsuario", encontrado.getTelefono())
                             .putInt("rolUsuario", rol)
                             .apply();
 
-                    // Vamos al fragment de éxito con el rol
                     Bundle args = new Bundle();
                     args.putInt("rol", rol);
                     navController.navigate(

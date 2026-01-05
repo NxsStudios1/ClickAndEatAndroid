@@ -1,4 +1,3 @@
-// com/example/login/network/model/ComentarioDto.java
 package com.example.login.network.model;
 
 import com.google.gson.annotations.SerializedName;
@@ -19,22 +18,18 @@ public class ComentarioDto {
     @SerializedName("calificacion")
     private int calificacion;
 
-    // AHORA ES STRING (COMIDA, SERVICIO, ...)
     @SerializedName("categoria")
     private String categoria;
 
-    // fecha formateada "dd/MM/yyyy HH:mm"
     @SerializedName("fechaComentario")
     private String fechaComentario;
 
     @SerializedName("idCliente")
     private int idCliente;
 
-    // nombre del cliente que el backend ya manda
     @SerializedName("nombreCliente")
     private String nombreCliente;
 
-    // lista de respuestas anidadas (si las necesitas)
     @SerializedName("respuestas")
     private List<RespuestaComentarioDto> respuestas;
 

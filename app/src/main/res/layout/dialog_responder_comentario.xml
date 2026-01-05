@@ -5,7 +5,6 @@
     android:background="@drawable/bg_dialog_redondeado"
     android:orientation="vertical">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/tvTituloDialog"
         android:layout_width="match_parent"
@@ -17,14 +16,12 @@
         android:gravity="center_vertical"
         android:paddingBottom="8dp" />
 
-    <!-- Línea separadora -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#EEEEEE"
         android:layout_marginBottom="8dp" />
 
-    <!-- Nombre del cliente -->
     <TextView
         android:id="@+id/tvNombreClienteDialog"
         android:layout_width="match_parent"
@@ -35,7 +32,6 @@
         android:textSize="14sp"
         android:layout_marginBottom="4dp" />
 
-    <!-- Comentario original -->
     <TextView
         android:id="@+id/tvComentarioOriginalDialog"
         android:layout_width="match_parent"
@@ -45,7 +41,6 @@
         android:textSize="13sp"
         android:layout_marginBottom="12dp" />
 
-    <!-- Tu respuesta -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +62,6 @@
         android:maxLines="6"
         android:textSize="14sp" />
 
-    <!-- Botones -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -17,7 +17,6 @@
         android:padding="12dp"
         android:background="@drawable/bg_card_ingrediente">
 
-        <!-- NOMBRE -->
         <TextView
             android:id="@+id/tvNombrePromocion"
             android:layout_width="match_parent"
@@ -27,7 +26,6 @@
             android:textSize="16sp"
             android:textColor="#FFFFFF" />
 
-        <!-- ID -->
         <TextView
             android:id="@+id/tvIdPromocion"
             android:layout_width="match_parent"
@@ -36,7 +34,6 @@
             android:textSize="12sp"
             android:textColor="#CFD8DC" />
 
-        <!-- DESCRIPCIÓN -->
         <TextView
             android:id="@+id/tvDescripcionPromocion"
             android:layout_width="match_parent"
@@ -46,7 +43,6 @@
             android:textColor="#ECEFF1"
             android:layout_marginTop="4dp" />
 
-        <!-- FECHA INICIO -->
         <TextView
             android:id="@+id/tvFechaInicioPromocion"
             android:layout_width="match_parent"
@@ -56,7 +52,6 @@
             android:textColor="#FFE082"
             android:layout_marginTop="4dp" />
 
-        <!-- FECHA FIN -->
         <TextView
             android:id="@+id/tvFechaFinPromocion"
             android:layout_width="match_parent"
@@ -65,7 +60,6 @@
             android:textSize="13sp"
             android:textColor="#FFE082" />
 
-        <!-- PRECIO -->
         <TextView
             android:id="@+id/tvPrecioPromocion"
             android:layout_width="match_parent"
@@ -76,7 +70,6 @@
             android:textColor="#FFECB3"
             android:layout_marginTop="4dp" />
 
-        <!-- CONTROLES (SWITCH + BOTONES) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,7 +106,6 @@
                 android:tint="#FFFFFF"
                 android:src="@android:drawable/ic_menu_edit" />
 
-            <!-- NUEVO: BOTÓN ELIMINAR -->
             <ImageButton
                 android:id="@+id/btnEliminarPromocion"
                 android:layout_width="36dp"
